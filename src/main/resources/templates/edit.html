@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit user</title>
+</head>
+<body>
+<h1>Edit user</h1>
+<form th:action="@{${user.id} == null ? '/user/create' : '/user/edit'}" method="post">
+    <input type="hidden" name="id" th:value="${user.id}">
+    <div>
+        <label for="firstName">First name</label>
+        <input type="text" id="firstName" name="firstName" required th:value="${user.firstName}">
+    </div>
+    <div>
+        <label for="lastName">Last name</label>
+        <input type="text" id="lastName" name="lastName" required th:value="${user.lastName}">
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" required th:value="${user.email}">
+    </div>
+    <div>
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" name="phone" required th:value="${user.phone}">
+    </div>
+    <button type="submit">Save</button>
+</form>
+</body>
+</html>
