@@ -1,7 +1,6 @@
 package ru.skillbox.users.repository;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 import ru.skillbox.users.model.User;
 
@@ -11,7 +10,6 @@ import java.util.Set;
 
 @Repository
 @RequiredArgsConstructor
-@Slf4j
 public class InMemoryUserRepository implements UserRepository {
 
     private final Set<User> users;
